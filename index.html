@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/bear.png">
   <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
+  <script defer src="./main.js"></script> 
   
   <title>Frontend Mentor | Time tracking dashboard</title>
 
@@ -21,97 +22,75 @@
           <span class="name">Jeremy Robson</span>
         </div>
         <div class="tabs">
-          <a href="">Daily</a>
-          <a href="">Weekly</a>
-          <a href="">Monthly</a>
+          <a class="dwm">Daily</a>
+          <a class="dwm">Weekly</a>
+          <a class="dwm">Monthly</a>
         </div>
       </div>      
 
       <div class="work-card">
         <div class="all-cards">
-          <h1 class="title">
-            Work
-          </h1>
-          <h2 class="hours daily">5hrs</h2>
-          <h3 class="hours daily previous">Previous - 7hrs</h3>
-          <!-- <h2 class="hours weeekly">32hrs</h2>
-          <h3 class="hours weeekly previous">Previous - 36hrs</h3>
-          <h2 class="hours monthly">103hrs</h2>
-          <h2 class="hours monthly">Previous - 128hrs</h2> -->
+          <div class="top">
+            <h1 class="title"></h1>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <h2 class="current"></h2>
+          <h3 class="previous"></h3>
         </div>
       </div>
 
       <div class="play-card">
         <div class="all-cards">
-
-          <h1 class="title">
-            Play
-          </h1>
-          <h2 class="hours daily">1hr</h2>
-          <h3 class="hours daily previous">Previous - 2hrs</h3>
-          <!-- <h2 class="hours weeekly">10hrs</h2>
-          <h3 class="hours weeekly previous">Previous - 8hrs</h3>
-          <h2 class="hours monthly">23hrs</h2>
-          <h2 class="hours monthly">Previous - 29hrs</h2> -->
+          <div class="top">
+            <h1 class="title"></h1>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <h2 class="current"></h2>
+          <h3 class="previous"></h3>
         </div>
       </div>
         
       <div class="study-card">
         <div class="all-cards">
-
-          <h1 class="title">
-            Study
-          </h1>
-          <h2 class="hours daily">0hrs</h2>
-          <h3 class="hours daily previous">Previous - 1hr</h3>
-          <!-- <h2 class="hours weeekly">4hrs</h2>
-          <h3 class="hours weeekly previous">Previous - 7hrs</h3>
-          <h2 class="hours monthly">13hrs</h2>
-          <h2 class="hours monthly">Previous - 19hrs</h2> -->
+          <div class="top">
+            <h1 class="title"></h1>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <h2 class="current"></h2>
+          <h3 class="previous"></h3>
         </div>
       </div>
       
       <div class="exercise-card">
         <div class="all-cards">
-
-          <h1 class="title">
-            Exercise
-          </h1>
-          <h2 class="hours daily">1hr</h2>
-          <h3 class="hours daily previous">Previous - 1hr</h3>
-          <!-- <h2 class="hours weeekly">4hrs</h2>
-          <h3 class="hours weeekly previous">Previous - 5hrs</h3>
-          <h2 class="hours monthly">11hrs</h2>
-          <h2 class="hours monthly">Previous - 18hrs</h2> -->
+          <div class="top">
+            <h1 class="title"></h1>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <h2 class="current"></h2>
+          <h3 class="previous"></h3>
         </div>
       </div>
       
       <div class="social-card">
         <div class="all-cards">
-
-          <h1 class="title">
-            Social
-          </h1>
-          <h2 class="hours daily">1hr</h2>
-          <h3 class="hours daily previous">Previous - 3hrs</h3>
-          <!-- <h2 class="hours weeekly">5hrs</h2>
-          <h3 class="hours weeekly previous">Previous - 10hrs</h3>
-          <h2 class="hours monthly">21hrs</h2>
-          <h2 class="hours monthly">Previous - 23hrs</h2> -->
+          <div class="top">
+            <h1 class="title"></h1>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <h2 class="current"></h2>
+          <h3 class="previous"></h3>
         </div>
       </div>
       
       <div class="selfcare-card">
         <div class="all-cards">
-          <h1 class="title">
-            Self Care
-          </h1>
-          <h2 class="hours daily">0hrs</h2>
-          <h3 class="hours daily previous">Previous - 1hr</h3>
-          <!-- <h2 class="hours weeekly">2hrs</h2>
-          <h3 class="hours weeekly previous">Previous - 2hrs</h3>
-          <h2 class="hours monthly">7hrs</h2>
-          <h2 class="hours monthly">Previous - 11hrs</h2> -->
+          <div class="top">
+            <h1 class="title"></h1>
+            <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg>
+          </div>
+          <h2 class="current"></h2>
+          <h3 class="previous"></h3>
         </div>
       </div>
     </section>
