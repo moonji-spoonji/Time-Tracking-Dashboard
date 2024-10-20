@@ -34,7 +34,6 @@ body {
     overflow: hidden;
     
     font-family: var(--ff-roboto);
-    color: var(--pale-blue);
     color: white;
 }
 
@@ -57,7 +56,7 @@ main {
     "profile exercise social selfcare";
     gap: 1.5rem;
 
-    width: 80%;
+    max-width: 1127.5px;
     place-items: center;
     justify-content: center;
 }
@@ -78,6 +77,11 @@ main {
     justify-content: space-between;
 }
 
+.all-cards:hover {
+    background-color: hsl(235, 46%, 45%);
+    transition: background-color 500ms linear;
+}
+
 [class$="-card"]  {
     height: 16rem;
     border-radius: 1.2rem;
@@ -96,7 +100,13 @@ main {
     /* font-weight: 600; */
 }
 
-.hours {
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.current {
     font-size: 4rem;
     font-weight: var(--fw-light);
 }
@@ -110,17 +120,13 @@ main {
 .profile {
     grid-area: profile;
     
-    height: 33.5rem;
-    /* background-color: var(--blue); */
-
-    
+    height: 33.5rem;    
     
     background-color: var(--dark-blue);
     border-radius: 1rem;
     
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 
 .profile .user {
@@ -128,7 +134,6 @@ main {
     height: 20rem;
     padding: 3rem;
     border-radius: 1rem;
-    /* width: 100%; */
     background-color: var(--blue);
 }
 
@@ -153,11 +158,14 @@ main {
     flex-direction: column;
     gap: 1rem;
     padding: 1.5rem 3rem;
-
 }
 
-a:visited{
+a {
     color: var(--desaturated-blue);
+}
+
+.active {
+    color: white;
 }
 
 .profile a {
@@ -211,8 +219,126 @@ a:visited{
     font-size: 1rem; 
     margin-top: 1rem;
 }
+
 .attribution a { 
     color: var(--blue); 
     text-decoration: none;
 }
 
+.hidden {
+    display: none;
+}
+
+@media (max-width: 376px) {
+    body {
+        overflow: auto;
+    }
+
+    main {
+        margin: 2rem 0;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas: 
+        "profile"
+        "work" 
+        "play" 
+        "study"
+        "exercise" 
+        "social" 
+        "selfcare";
+        gap: 1rem;
+    }
+
+    .profile {
+        grid-area: profile;
+        height: 9rem;          
+    }
+    
+    .profile .user {
+        display: grid;
+        grid-template-areas: 
+        "avatar report"
+        "avatar name";
+    
+        justify-content: space-between;
+        align-items: center;
+
+        height: 5rem;
+        padding: 1.5rem 2rem;
+        width: 12.5rem;
+    }
+    
+    .profile .avatar {
+        grid-area: avatar;
+        width: 2.5rem;
+    }
+    
+    .user p {
+        grid-area: report;
+        color: var(--pale-blue);
+        font-size: 0.8rem;
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+    }
+    
+    .name {
+        grid-area: name;
+        font-size: 1.2rem;
+        font-weight: var(--fw-light);
+    }
+
+    .profile .tabs {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 1rem 0;
+    }
+
+    .tabs a {
+        font-size: 1rem;
+    }
+
+    .all-cards {
+        padding: 1.5rem 2rem;
+        width: 12.5rem;
+        height: 4rem;
+    
+        border-radius: 1rem;
+    
+        display: grid;
+        grid-template-areas:  
+        "top top"
+        "current previous";
+        align-items: center;
+    }
+    
+    [class$="-card"]  {
+        height: 9rem;
+        border-radius: 1.2rem;
+    }
+
+    .title {
+        font-size: 1rem;
+    }
+
+    .top {
+        grid-area: top;
+    }
+
+    .current {
+        grid-area: current;
+        font-size: 1.5rem;
+    }
+    
+    .previous {
+        grid-area: previous;
+        font-size: 0.75rem;
+    }
+
+    .attribution { 
+        font-size: 0.72rem; 
+    }
+}
