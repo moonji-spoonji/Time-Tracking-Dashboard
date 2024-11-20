@@ -80,7 +80,7 @@ I want to continue improving on my JS DOM skills and working with APIs and JSON 
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/moonji-spoonji)
+- Frontend Mentor - [@moonji-spoonji](https://www.frontendmentor.io/profile/moonji-spoonji)
 
 ## Acknowledgments
 
